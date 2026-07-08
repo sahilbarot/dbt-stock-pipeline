@@ -1,0 +1,18 @@
+# version: 2
+
+# sources:
+#   - name: stock_pipeline
+#     database: unified-mender-307016
+#     schema: stock_pipeline
+#     tables:
+#       - name: raw_stock_prices
+#         description: "Raw daily stock price data for top 5 Nifty stocks"
+
+version: 2
+
+sources:
+  - name: stock_pipeline
+    database: unified-mender-307016
+    schema: stock_pipeline
+    tables:
+      - name: raw_stock_prices
