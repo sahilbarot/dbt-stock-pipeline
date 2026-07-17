@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stock_daily_metrics
+    description: "Daily calculated metrics for each stock"
+    columns:
+      - name: ticker
+        description: "Stock symbol"
+        tests:
+          - not_null
+      - name: date
+        description: "Trading date"
+        tests:
+          - not_null
+      - name: close
+        description: "Closing price"
+        tests:
+          - not_null
+      - name: daily_change_pct
+        description: "Daily % price change"
+        tests:
+          - not_null
+
+  - name: stock_summary
+    description: "Summary statistics per stock across full period"
+    columns:
+      - name: ticker
+        description: "Stock symbol"
+        tests:
+          - not_null
+          - unique
